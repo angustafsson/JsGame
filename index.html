@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JsGame - FooBar</title>
+</head>
+<body>
+<div id="content-wrapper">
+<div style="float:left; width:500px;">
+	<canvas id="canvas" style="border: 1px solid #000;"></canvas>
+	<input type="button" value="Add Player" data-bind="click: addPlayer">
+	<input type="button" value="Restart" data-bind="click: restart">
+	<input type="button" value="Pause" data-bind="click: togglePause">
+	<span data-bind="text: players().length"></span>
+	</div>
+	<div style="float:left; width:250px; height:500px; overflow: scroll;">
+	<ul data-bind="foreach: log">
+	<li data-bind="text: $data">
+	</li>
+	</div>
+</div>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.1.0.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
